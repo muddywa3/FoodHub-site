@@ -490,3 +490,171 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Admin Page Styles */
+.admin-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    border: 2px solid #ff6b35;
+    background-color: white;
+    color: #ff6b35;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: #ff6b35;
+    color: white;
+}
+
+.admin-order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-order-table th,
+.admin-order-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-order-table th {
+    background-color: #004e89;
+    color: white;
+    text-align: left;
+}
+
+.admin-order-table tbody tr:hover {
+    background-color: #fff7f0;
+}
+
+.order-status {
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.order-status.pending {
+    background-color: #fff4e6;
+    color: #d97706;
+}
+
+.order-status.completed {
+    background-color: #e6ffed;
+    color: #166534;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+    color: #ff6b35;
+    font-size: 2.5rem;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #ff6b35;
+    color: white;
+    font-weight: 600;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #fff7f0;
+}
+
+.admin-table td.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.admin-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.admin-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.admin-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.admin-form-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-empty-state {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

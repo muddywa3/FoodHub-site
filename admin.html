@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FoodHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">🍽️ FoodHub Admin</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="admin-section">
+        <div class="container">
+            <div class="admin-header">
+                <h1>Manage Services</h1>
+                <div class="admin-actions">
+                    <button class="btn btn-primary" id="show-add-service">Add New Service</button>
+                    <button class="btn btn-secondary" id="reset-services">Reset to Defaults</button>
+                    <button class="btn btn-secondary" id="logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="tab-btn active" id="tab-services">Services</button>
+                <button class="tab-btn" id="tab-orders">Orders</button>
+            </div>
+
+            <div id="admin-content">
+                <div id="service-table-container"></div>
+                <div id="order-table-container" style="display: none;"></div>
+            </div>
+
+            <div class="admin-form" id="service-form-card" style="display: none;">
+                <h2 id="form-title">Add Service</h2>
+                <form id="service-form">
+                    <input type="hidden" id="service-id">
+
+                    <label for="service-name">Service Name</label>
+                    <input type="text" id="service-name" required>
+
+                    <label for="service-category">Category</label>
+                    <select id="service-category" required>
+                        <option value="pizza">Pizza</option>
+                        <option value="burger">Burgers</option>
+                        <option value="salad">Salads</option>
+                        <option value="dessert">Desserts</option>
+                        <option value="drinks">Drinks</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="service-price">Price</label>
+                    <input type="number" id="service-price" step="0.01" min="0" required>
+
+                    <label for="service-emoji">Emoji</label>
+                    <input type="text" id="service-emoji" maxlength="2" placeholder="🍔" required>
+
+                    <label for="service-description">Description</label>
+                    <textarea id="service-description" required></textarea>
+
+                    <label for="service-rating">Rating</label>
+                    <input type="text" id="service-rating" maxlength="10" placeholder="⭐⭐⭐⭐⭐" required>
+
+                    <div class="admin-form-buttons">
+                        <button class="btn btn-success" type="submit" id="save-service">Save Service</button>
+                        <button class="btn btn-secondary" type="button" id="cancel-service">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 FoodHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

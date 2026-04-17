@@ -1,5 +1,5 @@
-// Product Database
-const products = [
+// Default product database
+const defaultProducts = [
     {
         id: 1,
         name: "Pepperoni Pizza",
@@ -119,11 +119,31 @@ const products = [
     }
 ];
 
+let products = [];
 let cart = [];
 let currentFilter = "all";
 
+function loadProducts() {
+    const savedProducts = localStorage.getItem('foodhubProducts');
+    if (savedProducts) {
+        try {
+            products = JSON.parse(savedProducts);
+        } catch (e) {
+            products = [...defaultProducts];
+        }
+    } else {
+        products = [...defaultProducts];
+        localStorage.setItem('foodhubProducts', JSON.stringify(products));
+    }
+}
+
+function saveProducts() {
+    localStorage.setItem('foodhubProducts', JSON.stringify(products));
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    loadProducts();
     loadCart();
     displayFeaturedProducts();
     displayMenuProducts();

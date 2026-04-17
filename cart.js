@@ -250,7 +250,8 @@ function completeOrder(formData, orderSummary) {
         date: new Date().toLocaleString(),
         customer: name,
         items: cart,
-        total: orderSummary.total
+        total: orderSummary.total,
+        status: 'Pending'
     };
 
     let orders = JSON.parse(localStorage.getItem('orders') || '[]');
