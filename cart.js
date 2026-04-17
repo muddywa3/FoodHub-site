@@ -269,3 +269,4 @@ function completeOrder(formData, orderSummary) {
     document.querySelector('div[style*="position: fixed"]').remove();
     window.location.href = 'index.html';
 }
+
